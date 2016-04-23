@@ -6,11 +6,11 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="initial-scale=1,minimum-scale=1,width=device-width">
 
-  <title>SEEN</title>
+  <title>{^title}SEEN{:else}{title}{/title}</title>
 
-  <link rel="shortcut icon" href="public/img/favicon.ico">
-  <link rel="icon" href="public/img/favicon.ico" sizes="64x64" type="image/png">
-  <link rel="stylesheet" href="public/css/style.css">
+  <link rel="shortcut icon" href="/public/img/favicon.ico">
+  <link rel="icon" href="/public/img/favicon.ico" sizes="64x64" type="image/png">
+  <link rel="stylesheet" href="/public/css/style.css">
 </head>
 <body>
   <header class="header grid grid--gutter">
@@ -30,4 +30,4 @@
     </nav>
   </header>
 
-  <main class="main">  
+  <main class="main">

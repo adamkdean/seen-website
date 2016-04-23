@@ -3,7 +3,7 @@
 
       <div class="col w-5">
         <div class="film__poster media media--rounded media--pop">
-          <img src="images/interstellar.jpg" alt="Interstellar Poster" />
+          <img src="/public/img/interstellar.jpg" alt="Interstellar Poster" />
         </div>
       </div>
 

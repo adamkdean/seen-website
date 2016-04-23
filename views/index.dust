@@ -1,5 +1,5 @@
 {> "partials/header"/}
-    <section class="grid grid--gutter push-4">
+    <!-- <section class="grid grid--gutter push-4">
       <h1 class="kilo col w-12">Popular films <div class="btn-wrap"><a class="btn btn--subtle icon--small" icon-r="caret-down">in the last week</a></div></h1>
       <div class="push-2 col w-12 grid grid--gutter">
         <div class="col w-3">
@@ -46,9 +46,6 @@
             </a>
           </article>
         </div>
-        <!-- <div class="col w-2">
-          <a class="postersize postersize-3" href="/films"><span class="hecto t--center icon--large" icon-r="angle-right"></span></a>
-        </div> -->
       </div>
     </section>
 
@@ -96,5 +93,5 @@
           </article>
         </div>
       </div>
-    </section>
+    </section> -->
 {> "partials/footer"/}
