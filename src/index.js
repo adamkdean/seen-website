@@ -7,7 +7,7 @@ const app = express();
 const httpPort = process.env.HTTP_PORT || 3000;
 
 app.use(morgan('combined'));
-app.use(express.static(path.join(__dirname, '..', 'public'), { redirect: false }));
+app.use('/public', express.static(path.join(__dirname, '..', 'public'), { redirect: false }));
 
 app.engine('dust', cons.dust);
 app.set('view engine', 'dust');

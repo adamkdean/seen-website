@@ -41,7 +41,7 @@
           <article class="film">
             <a href="film.html">
               <div class="film__poster media media--rounded media--pop">
-                <img src="images/interstellar.jpg" alt="Interstellar Poster" />
+                <img src="public/img/interstellar.jpg" alt="Interstellar Poster" />
               </div>
               <h1 class="kilo pad">Interstellar</h1>
               <h2 class="deca">Christopher Nolan</h2>
@@ -52,7 +52,7 @@
           <article class="film">
             <a href="film/dallas-buyers-club">
               <div class="film__poster media media--rounded media--pop">
-                <img src="images/dallas-buyers-club.jpg" alt="Dallas Buyers Club Poster" />
+                <img src="public/img/dallas-buyers-club.jpg" alt="Dallas Buyers Club Poster" />
               </div>
               <h1 class="kilo pad">Dallas Buyers Club</h1>
               <h2 class="deca">Jean-Marc Vallée</h2>
@@ -63,7 +63,7 @@
           <article class="film">
             <a href="film/killerjoe">
               <div class="film__poster media media--rounded media--pop">
-                <img src="images/killerjoe.jpg" alt="Killer Joe Poster" />
+                <img src="public/img/killerjoe.jpg" alt="Killer Joe Poster" />
               </div>
               <h1 class="kilo pad">Killer Joe</h1>
               <h2 class="deca">William Friedkin</h2>
@@ -74,7 +74,7 @@
           <article class="film">
             <a href="film/mud">
               <div class="film__poster media media--rounded media--pop">
-                <img src="images/mud.jpg" alt="Mud Poster" />
+                <img src="public/img/mud.jpg" alt="Mud Poster" />
               </div>
               <h1 class="kilo pad">Mud</h1>
               <h2 class="deca">Jeff Nichols</h2>
@@ -94,7 +94,7 @@
           <article class="review-excerpt grid">
             <div class="col w-2">
               <div class="film__poster media media--rounded media--pop">
-                <img src="images/mud.jpg" alt="Mud Poster" />
+                <img src="public/img/mud.jpg" alt="Mud Poster" />
               </div>
             </div>
             <div class="col col--gutter w-10">
@@ -114,7 +114,7 @@
           <article class="review-excerpt grid">
             <div class="col w-2">
               <div class="film__poster media media--rounded media--pop">
-                <img src="images/interstellar.jpg" alt="Interstellar Poster" />
+                <img src="public/img/interstellar.jpg" alt="Interstellar Poster" />
               </div>
             </div>
             <div class="col col--gutter w-10">
