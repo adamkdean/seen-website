@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="initial-scale=1,minimum-scale=1,width=device-width">
+
+  <title>SEEN</title>
+
+  <link rel="shortcut icon" href="public/img/favicon.ico">
+  <link rel="icon" href="public/img/favicon.ico" sizes="64x64" type="image/png">
+  <link rel="stylesheet" href="public/css/style.css">
+</head>
+<body>
+  <header class="header grid grid--gutter">
+    <h1 class="header__logo push-2 col w-3"><a class="mega" href="/">SEEN</a></h1>
+
+    <nav class="header__navigation navigation push-2">
+      <section class="navigation__films col w-2">
+        <h1><a class="mega" href="/films">Films</a></h1>
+      </section>
+      <section class="navigation__reviews col w-2">
+        <h1><a class="mega" href="/reviews">Reviews</a></h1>
+      </section>
+      <section class="navigation__search search col w-4">
+        <input class="search__input input input--text mega" placeholder="Search" value="" />
+        <div class="search__suggestions"></div>
+      </section>
+    </nav>
+  </header>
+
+  <main class="main">
+    content here
+  </main>
+
+  <footer>
+    <!-- some sort of footer? -->
+  </footer>
+
+</body>
+</html>
