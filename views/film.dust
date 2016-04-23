@@ -1,42 +1,36 @@
 {> "partials/header"/}
-    <section class="grid grid--gutter push-4">
+  <section class="grid grid--gutter push-4">
 
-      <div class="col w-5">
-        <div class="film__poster media media--rounded media--pop">
-          <img src="/public/img/interstellar.jpg" alt="Interstellar Poster" />
-        </div>
+    <div class="col w-5">
+      <div class="film__poster media media--rounded media--pop">
+        <img src="{posterUrlPrefix}{film.poster_path}" alt="{film.title} Poster" />
       </div>
+    </div>
 
-      <div class="col w-7">
-        <h1 class="giga pad">Interstellar</h1>
-        <dl class="t">
-          <dt>Score</dt>
-          <dd>8.6</dd>
-          <dt>Director</dt>
-          <dd>Christopher Nolan</dd>
-          <dt>Length</dt>
-          <dd>2h 49min</dd>
-        </dl>
-        <div class="push-3">
-          <h2 class="mega pad">Most read reviews</h2>
-
-          <article class="push-1">
-            <h3 class="kilo pad">Tyler Miller</h3>
-            <p>5 November 2014</p>
-            <div class="t">
-              <p>'Interstellar' was incredible. The visuals, the score, the acting, were all amazing. The plot is definitely one of the most original I've seen in a while. Most of the critic reviews have said that some bits are a little too unbelievable, but I have to disagree. Yes, there were some parts that were definitely in the "fi" part of sci-fi... <a href="review/1234">Continue reading</a></p>
-            </div>
-          </article>
-
-          <article class="push-1">
-            <h3 class="kilo pad">slayerjmk95</h3>
-            <p>3 November 2014</p>
-            <div class="t">
-              <p>There have been many reviewers and critics alike that have high praise for the film (the visual effects, the acting, the music), but say how it's not Christopher Nolan's best directed film. This is where i personally would have to disagree. Before i get into it, though, i'll talk about Interstellar a bit... <a href="review/5678">Continue reading</a></p>
-            </div>
-          </article>
-        </div>
+    <div class="col w-7">
+      <h1 class="giga pad">{film.title}</h1>
+      <dl class="t">
+        <dt>Score</dt>
+        <dd>{film.score}</dd>
+        <dt>Director</dt>
+        <dd>{film.director}</dd>
+        <dt>Length</dt>
+        <dd>{film.length}</dd>
+      </dl>
+      <div class="push-3">
+        <h2 class="mega pad">Most read reviews</h2>
+        {^reviews}<p>Sorry, there are no reviews!</p>{/reviews}
+        {#reviews}{@lt key=$idx value=2}
+        <article class="push-1">
+          <h3 class="kilo pad">{reviews[$idx].author}</h3>
+          <p>5 November 2014</p>
+          <div class="t">
+            <p>{reviews[$idx].summary} ... <a href="#review/{reviews[$idx].id}">Continue reading</a></p>
+          </div>
+        </article>
+        {/lt}{/reviews}
       </div>
+    </div>
 
-    </section>
+  </section>
 {> "partials/footer"/}

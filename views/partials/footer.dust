@@ -1,7 +1,8 @@
   </main>
 
   <footer>
-    <!-- some sort of footer? -->
+    &copy; 2016 SEEN - A hypothetical movie aggregate company.<br>
+    The source code is available on <a href="https://github.com/seenproject">GitHub</a>.
   </footer>
 
 </body>

@@ -23,10 +23,10 @@
       <section class="navigation__reviews col w-2">
         <h1><a class="mega" href="/reviews">Reviews</a></h1>
       </section>
-      <section class="navigation__search search col w-4">
+      <!-- <section class="navigation__search search col w-4">
         <input class="search__input input input--text mega" placeholder="Search" value="" />
         <div class="search__suggestions"></div>
-      </section>
+      </section> -->
     </nav>
   </header>
 

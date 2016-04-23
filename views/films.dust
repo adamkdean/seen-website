@@ -1,3 +1,79 @@
 {> "partials/header"/}
-  films
+
+    <section class="grid grid--gutter push-4">
+      <h1 class="kilo col w-12">Popular films <div class="btn-wrap"><a class="btn btn--subtle icon--small">in the last week</a></div></h1>
+      <div class="push-2 col w-12 grid grid--gutter">
+        {#lastWeek}{@lt key=$idx value=4}
+          <div class="col w-3">
+            <article class="film">
+              <a href="/film/{lastWeek[$idx].slug}">
+                <div class="film__poster media media--rounded media--pop">
+                  <img src="{posterUrlPrefix}{lastWeek[$idx].poster_path}" alt="{lastWeek[$idx].title} Poster" />
+                </div>
+                <h1 class="kilo pad">{lastWeek[$idx].title}</h1>
+                <h2 class="deca">{lastWeek[$idx].director}</h2>
+              </a>
+            </article>
+          </div>
+        {/lt}{/lastWeek}
+      </div>
+    </section>
+
+    <section class="grid grid--gutter push-4">
+      <h1 class="kilo col w-12">Popular films <div class="btn-wrap"><a class="btn btn--subtle icon--small">in the last month</a></div></h1>
+      <div class="push-2 col w-12 grid grid--gutter">
+        {#lastMonth}{@lt key=$idx value=4}
+          <div class="col w-3">
+            <article class="film">
+              <a href="/film/{lastMonth[$idx].slug}">
+                <div class="film__poster media media--rounded media--pop">
+                  <img src="{posterUrlPrefix}{lastMonth[$idx].poster_path}" alt="{lastMonth[$idx].title} Poster" />
+                </div>
+                <h1 class="kilo pad">{lastMonth[$idx].title}</h1>
+                <h2 class="deca">{lastMonth[$idx].director}</h2>
+              </a>
+            </article>
+          </div>
+        {/lt}{/lastMonth}
+      </div>
+    </section>
+
+    <section class="grid grid--gutter push-4">
+      <h1 class="kilo col w-12">Popular films <div class="btn-wrap"><a class="btn btn--subtle icon--small">in the last year</a></div></h1>
+      <div class="push-2 col w-12 grid grid--gutter">
+        {#lastYear}{@lt key=$idx value=4}
+          <div class="col w-3">
+            <article class="film">
+              <a href="/film/{lastYear[$idx].slug}">
+                <div class="film__poster media media--rounded media--pop">
+                  <img src="{posterUrlPrefix}{lastYear[$idx].poster_path}" alt="{lastYear[$idx].title} Poster" />
+                </div>
+                <h1 class="kilo pad">{lastYear[$idx].title}</h1>
+                <h2 class="deca">{lastYear[$idx].director}</h2>
+              </a>
+            </article>
+          </div>
+        {/lt}{/lastYear}
+      </div>
+    </section>
+
+    <section class="grid grid--gutter push-4">
+      <h1 class="kilo col w-12">Popular films <div class="btn-wrap"><a class="btn btn--subtle icon--small">of all time</a></div></h1>
+      <div class="push-2 col w-12 grid grid--gutter">
+        {#allTime}{@lt key=$idx value=4}
+          <div class="col w-3">
+            <article class="film">
+              <a href="/film/{allTime[$idx].slug}">
+                <div class="film__poster media media--rounded media--pop">
+                  <img src="{posterUrlPrefix}{allTime[$idx].poster_path}" alt="{allTime[$idx].title} Poster" />
+                </div>
+                <h1 class="kilo pad">{allTime[$idx].title}</h1>
+                <h2 class="deca">{allTime[$idx].director}</h2>
+              </a>
+            </article>
+          </div>
+        {/lt}{/allTime}
+      </div>
+    </section>
+
 {> "partials/footer"/}

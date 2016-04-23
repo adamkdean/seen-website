@@ -1,0 +1,25 @@
+/* common/extra.scss
+ * This scss file will contain a few extra bits,
+ * just to help me get things to look the way I need.
+ */
+
+.film__poster {
+  img {
+    width: 100%;
+  }
+}
+
+footer {
+  text-align: center;
+  font-size: 90%;
+  color: #333;
+  padding: 20px 0;
+
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

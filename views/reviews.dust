@@ -1,3 +1,127 @@
 {> "partials/header"/}
-  reviews
+
+  <section class="grid grid--gutter push-4">
+    <h1 class="kilo col w-12">Most read reviews <div class="btn-wrap"><a class="btn btn--subtle icon--small">this week</a></div></h1>
+    <div class="push-2 col w-12 grid grid--gutter">
+      {#thisWeek}
+      {@lt key=$idx value=2}
+      <div class="col w-6">
+        <article class="review-excerpt grid">
+          <div class="col w-2">
+            <div class="film__poster media media--rounded media--pop">
+              <img src="{posterUrlPrefix}{thisWeek[$idx].poster_path}" alt="{thisWeek[$idx].film_title} Poster" />
+            </div>
+          </div>
+          <div class="col col--gutter w-10">
+            <a href="/film/{thisWeek[$idx].film_slug}">
+              <h1 class="mega pad review__title">{thisWeek[$idx].film_title}</h1>
+            </a>
+            <small>Written by</small>
+            <h2 class="kilo review__author">{thisWeek[$idx].author}</h2>
+          </div>
+          <div class="col w-12 push-1">
+            <div class="review__body t">
+              <p>{thisWeek[$idx].summary}</p>
+            </div>
+            <a class="deca pad btn btn--subtle" href="#/review/{thisWeek[$idx].id}">Continue reading...</a>
+          </div>
+        </article>
+      </div>
+      {/lt}{/thisWeek}
+    </div>
+  </section>
+
+  <section class="grid grid--gutter push-4">
+    <h1 class="kilo col w-12">Most read reviews <div class="btn-wrap"><a class="btn btn--subtle icon--small">this month</a></div></h1>
+    <div class="push-2 col w-12 grid grid--gutter">
+      {#thisMonth}
+      {@lt key=$idx value=2}
+      <div class="col w-6">
+        <article class="review-excerpt grid">
+          <div class="col w-2">
+            <div class="film__poster media media--rounded media--pop">
+              <img src="{posterUrlPrefix}{thisMonth[$idx].poster_path}" alt="{thisMonth[$idx].film_title} Poster" />
+            </div>
+          </div>
+          <div class="col col--gutter w-10">
+            <a href="/film/{thisMonth[$idx].film_slug}">
+              <h1 class="mega pad review__title">{thisMonth[$idx].film_title}</h1>
+            </a>
+            <small>Written by</small>
+            <h2 class="kilo review__author">{thisMonth[$idx].author}</h2>
+          </div>
+          <div class="col w-12 push-1">
+            <div class="review__body t">
+              <p>{thisMonth[$idx].summary}</p>
+            </div>
+            <a class="deca pad btn btn--subtle" href="#/review/{thisMonth[$idx].id}">Continue reading...</a>
+          </div>
+        </article>
+      </div>
+      {/lt}{/thisMonth}
+    </div>
+  </section>
+
+  <section class="grid grid--gutter push-4">
+    <h1 class="kilo col w-12">Most read reviews <div class="btn-wrap"><a class="btn btn--subtle icon--small">this year</a></div></h1>
+    <div class="push-2 col w-12 grid grid--gutter">
+      {#thisYear}
+      {@lt key=$idx value=2}
+      <div class="col w-6">
+        <article class="review-excerpt grid">
+          <div class="col w-2">
+            <div class="film__poster media media--rounded media--pop">
+              <img src="{posterUrlPrefix}{thisYear[$idx].poster_path}" alt="{thisYear[$idx].film_title} Poster" />
+            </div>
+          </div>
+          <div class="col col--gutter w-10">
+            <a href="/film/{thisYear[$idx].film_slug}">
+              <h1 class="mega pad review__title">{thisYear[$idx].film_title}</h1>
+            </a>
+            <small>Written by</small>
+            <h2 class="kilo review__author">{thisYear[$idx].author}</h2>
+          </div>
+          <div class="col w-12 push-1">
+            <div class="review__body t">
+              <p>{thisYear[$idx].summary}</p>
+            </div>
+            <a class="deca pad btn btn--subtle" href="#/review/{thisYear[$idx].id}">Continue reading...</a>
+          </div>
+        </article>
+      </div>
+      {/lt}{/thisYear}
+    </div>
+  </section>
+
+  <section class="grid grid--gutter push-4">
+    <h1 class="kilo col w-12">Most read reviews <div class="btn-wrap"><a class="btn btn--subtle icon--small">of all time</a></div></h1>
+    <div class="push-2 col w-12 grid grid--gutter">
+      {#allTime}
+      {@lt key=$idx value=2}
+      <div class="col w-6">
+        <article class="review-excerpt grid">
+          <div class="col w-2">
+            <div class="film__poster media media--rounded media--pop">
+              <img src="{posterUrlPrefix}{allTime[$idx].poster_path}" alt="{allTime[$idx].film_title} Poster" />
+            </div>
+          </div>
+          <div class="col col--gutter w-10">
+            <a href="/film/{allTime[$idx].film_slug}">
+              <h1 class="mega pad review__title">{allTime[$idx].film_title}</h1>
+            </a>
+            <small>Written by</small>
+            <h2 class="kilo review__author">{allTime[$idx].author}</h2>
+          </div>
+          <div class="col w-12 push-1">
+            <div class="review__body t">
+              <p>{allTime[$idx].summary}</p>
+            </div>
+            <a class="deca pad btn btn--subtle" href="#/review/{allTime[$idx].id}">Continue reading...</a>
+          </div>
+        </article>
+      </div>
+      {/lt}{/allTime}
+    </div>
+  </section>
+
 {> "partials/footer"/}

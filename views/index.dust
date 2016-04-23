@@ -1,97 +1,53 @@
 {> "partials/header"/}
-    <!-- <section class="grid grid--gutter push-4">
-      <h1 class="kilo col w-12">Popular films <div class="btn-wrap"><a class="btn btn--subtle icon--small" icon-r="caret-down">in the last week</a></div></h1>
+
+    <section class="grid grid--gutter push-4">
+      <h1 class="kilo col w-12">Popular films <div class="btn-wrap"><a class="btn btn--subtle icon--small">in the last week</a></div></h1>
       <div class="push-2 col w-12 grid grid--gutter">
+        {#films}{@lt key=$idx value=4}
         <div class="col w-3">
           <article class="film">
-            <a href="film.html">
+            <a href="/film/{films[$idx].slug}">
               <div class="film__poster media media--rounded media--pop">
-                <img src="public/img/interstellar.jpg" alt="Interstellar Poster" />
+                <img src="{posterUrlPrefix}{films[$idx].poster_path}" alt="{films[$idx].title} Poster" />
               </div>
-              <h1 class="kilo pad">Interstellar</h1>
-              <h2 class="deca">Christopher Nolan</h2>
+              <h1 class="kilo pad">{films[$idx].title}</h1>
+              <h2 class="deca">{films[$idx].director}</h2>
             </a>
           </article>
         </div>
-        <div class="col w-3">
-          <article class="film">
-            <a href="film/dallas-buyers-club">
-              <div class="film__poster media media--rounded media--pop">
-                <img src="public/img/dallas-buyers-club.jpg" alt="Dallas Buyers Club Poster" />
-              </div>
-              <h1 class="kilo pad">Dallas Buyers Club</h1>
-              <h2 class="deca">Jean-Marc Vallée</h2>
-            </a>
-          </article>
-        </div>
-        <div class="col w-3">
-          <article class="film">
-            <a href="film/killerjoe">
-              <div class="film__poster media media--rounded media--pop">
-                <img src="public/img/killerjoe.jpg" alt="Killer Joe Poster" />
-              </div>
-              <h1 class="kilo pad">Killer Joe</h1>
-              <h2 class="deca">William Friedkin</h2>
-            </a>
-          </article>
-        </div>
-        <div class="col w-3">
-          <article class="film">
-            <a href="film/mud">
-              <div class="film__poster media media--rounded media--pop">
-                <img src="public/img/mud.jpg" alt="Mud Poster" />
-              </div>
-              <h1 class="kilo pad">Mud</h1>
-              <h2 class="deca">Jeff Nichols</h2>
-            </a>
-          </article>
-        </div>
+        {/lt}{/films}
       </div>
     </section>
 
     <section class="grid grid--gutter push-4">
-      <h1 class="kilo col w-12">Most read reviews <div class="btn-wrap"><a class="btn btn--subtle icon--small" icon-r="caret-down">this week</a></div></h1>
+      <h1 class="kilo col w-12">Most read reviews <div class="btn-wrap"><a class="btn btn--subtle icon--small">this week</a></div></h1>
       <div class="push-2 col w-12 grid grid--gutter">
+        {#reviews}
+        {@lt key=$idx value=2}
         <div class="col w-6">
           <article class="review-excerpt grid">
             <div class="col w-2">
               <div class="film__poster media media--rounded media--pop">
-                <img src="public/img/mud.jpg" alt="Mud Poster" />
+                <img src="{posterUrlPrefix}{reviews[$idx].poster_path}" alt="{reviews[$idx].film_title} Poster" />
               </div>
             </div>
             <div class="col col--gutter w-10">
-              <h1 class="mega pad review__title">Exquisite Piece Of Filmmaking</h1>
+              <a href="/film/{reviews[$idx].film_slug}">
+                <h1 class="mega pad review__title">{reviews[$idx].film_title}</h1>
+              </a>
               <small>Written by</small>
-              <h2 class="kilo review__author">SmashingUKProductions</h2>
+              <h2 class="kilo review__author">{reviews[$idx].author}</h2>
             </div>
             <div class="col w-12 push-1">
               <div class="review__body t">
-                <p>An exquisite piece of filmmaking from writer-director Jeff Nichols, bolstered by powerful performances from Matthew McConaughey, Reece Witherspoon, Sam Shephard, Tye Sheridan and Jacob Lofland. 'Mud' is a beautifully shot film that blends crime, drama and romance into a heartfelt plot that follows two young boys who encounter a fugitive who needs their help. Set against some of the most unique and stunning locations ever used in a film, 'Mud' is reminiscent of flicks including 'Stand by Me' and 'Night of the Hunter'. A realistic and gripping coming-of-age tale that not only stands as being one of the best films of 2012, but one of the best dramas of the past decade.</p>
+                <p>{reviews[$idx].summary}</p>
               </div>
-              <a class="deca pad btn btn--subtle" href="/review">Continue reading...</a>
+              <a class="deca pad btn btn--subtle" href="#/review/{reviews[$idx].id}">Continue reading...</a>
             </div>
           </article>
         </div>
-        <div class="col w-6">
-          <article class="review-excerpt grid">
-            <div class="col w-2">
-              <div class="film__poster media media--rounded media--pop">
-                <img src="public/img/interstellar.jpg" alt="Interstellar Poster" />
-              </div>
-            </div>
-            <div class="col col--gutter w-10">
-              <h1 class="mega pad review__title">'Interstellar'</h1>
-              <small>Written by</small>
-              <h2 class="kilo review__author">Tyler Miller</h2>
-            </div>
-            <div class="col w-12 push-1">
-              <div class="review__body t">
-                <p>'Interstellar' was incredible. The visuals, the score, the acting, were all amazing. The plot is definitely one of the most original I've seen in a while. Most of the critic reviews have said that some bits are a little too unbelievable, but I have to disagree. Yes, there were some parts that were definitely in the "fi" part of sci-fi. But the thing is, 'Interstellar' deals with concepts that we know very little about. We have no idea what the 4th or 5th dimension is like, or what it would be like to go through a wormhole or a black hole. I don't think it's fair to call something unbelievable, when we have absolutely no idea what WOULD be believable in those circumstances. Either way, excellent writing from the Nolan brothers. The visuals were outstanding, and will no doubt be nominated for an Oscar. The performances were excellent, though nothing Oscar worthy, as is the case with most of Nolan's films ('The Dark Knight' being the obvious exception). Hans Zimmer's score was amazing and blended perfectly with the film. All in all, 'Interstellar' is an excellent movie, which I personally think is Nolan's most beautiful film to date.</p>
-              </div>
-              <a class="deca pad btn btn--subtle" href="/review">Continue reading...</a>
-            </div>
-          </article>
-        </div>
+        {/lt}{/reviews}
       </div>
-    </section> -->
+    </section>
+
 {> "partials/footer"/}
