@@ -30,13 +30,4 @@
     </nav>
   </header>
 
-  <main class="main">
-    content here
-  </main>
-
-  <footer>
-    <!-- some sort of footer? -->
-  </footer>
-
-</body>
-</html>
+  <main class="main">  

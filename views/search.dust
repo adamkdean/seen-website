@@ -1,0 +1,3 @@
+{> "partials/header"/}
+  search
+{> "partials/footer"/}

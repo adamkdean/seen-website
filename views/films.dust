@@ -1,0 +1,3 @@
+{> "partials/header"/}
+  films
+{> "partials/footer"/}

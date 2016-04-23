@@ -1,0 +1,3 @@
+{> "partials/header"/}
+  reviews
+{> "partials/footer"/}
