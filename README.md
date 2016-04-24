@@ -1,5 +1,11 @@
 # website
 
-## Notes
+The website portion of the SEEN project.
 
-* TMDB images are stored @ https://image.tmdb.org/t/p/w300{/ID.jpg}
+## Live demo
+
+[SEEN Live Demo](http://seen.akd.io/)
+
+## More info
+
+Please refer to [docs](https://github.com/seenproject/docs) for more information.
