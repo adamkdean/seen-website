@@ -5,8 +5,8 @@ RUN mkdir /var/app
 COPY . /var/app
 WORKDIR /var/app
 
-RUN npm config set loglevel warn
-RUN npm install --global gulp
-RUN npm install
+RUN npm update --global npm
+RUN npm install --production --global gulp
+RUN npm install --production
 
 CMD ["npm", "start"]
